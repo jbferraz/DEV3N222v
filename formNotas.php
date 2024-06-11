@@ -33,13 +33,24 @@
         $valorFinal = (float) $bm1 + (float) $bm2 + (float) $bm3 + (float) $bm4;
         $resultado = $valorFinal / 4;
         $diferencaPraMedia = 7 - $resultado;
+        //Verificar menor nota
+        if (($bm1 <= $bm2) && ($bm1 <= $bm3) && ($bm1 <= $bm4)){
+            $menornota = $bm1;
+        } elseif (($bm2 <= $bm1) && ($bm2 <= $bm3) && ($bm1 <= $bm4)){
+            $menornota = $bm2;
+        } elseif (($bm3 <= $bm1) && ($bm3 <= $bm2) && ($bm3 <= $bm4)){
+            $menornota = $bm3;
+        } elseif (($bm4 <= $bm1) && ($bm4 <= $bm2) && ($bm4 <= $bm3)){
+            $menornota = $bm4;
+        } 
+
         // Verifica o resltado e apresenta na tela
         if ($resultado == 0) {
             $result =  "O aluno foi reprovado com mota final : 0.0";
         } elseif ($resultado >= 7) {
             $result =  "O aluno em questão foi aprovado com nota final : " . $resultado;
         } else {
-            $result = "Faltou " . $diferencaPraMedia . " para atingir a média. <br> O aluno em questão foi reprovado com nota final : " . $resultado . "<br>";
+            $result = "Faltou " . $diferencaPraMedia . " para atingir a média. <br> O aluno em questão foi reprovado com nota final : " . $resultado . "<br> A menor nota foi: ". $menornota . "<br>" ;
         }
 
         echo "<h4>" . $result . "</h4>";

@@ -24,6 +24,9 @@
     <h1>Recebimento e Cálculo da Nota Final dos Alunos</h1>
     <br><br>
     <form method="post" action="">
+        <label for="valores">Insira a série:</label>
+        <input type="text" required name="serie" placeholder="insira a série do aluno: ">
+        <br>
         <label for="valores">Insira os valores dos bimestres com virgula:</label>
         <br>
         <input type="number" step="0.1" min="0" max="10" required name="Bm1" placeholder="Insira o Bm 1:" onblur="validarNota(this)">
@@ -43,16 +46,17 @@
         $bm2 = $_POST["Bm2"];
         $bm3 = $_POST["Bm3"];
         $bm4 = $_POST["Bm4"];
+        $serie = $_POST["serie"];
         $valorFinal = (float) $bm1 + (float) $bm2 + (float) $bm3 + (float) $bm4;
         $resultado = $valorFinal / 4;
         $diferencaPraMedia = 7 - $resultado;
         // Verifica o resultado e apresenta na tela
         if ($resultado == 0) {
-            $result =  "O aluno foi reprovado com nota final: 0.0";
+            $result =  "O aluno da serie: ". $serie ." foi reprovado com nota final: 0.0";
         } elseif ($resultado >= 7) {
-            $result =  "O aluno foi aprovado com nota final: " . $resultado;
+            $result =  "O aluno da serie: ". $serie ." foi aprovado com nota final: " . $resultado;
         } else {
-            $result = "Faltou " . $diferencaPraMedia . " para atingir a média. <br> O aluno foi reprovado com nota final: " . $resultado . "<br>";
+            $result = "Faltou " . $diferencaPraMedia. " para atingir a média. <br> O aluno da serie:". $serie ." foi reprovado com nota final: " . $resultado . "<br>";
         }
 
         echo "<h4>" . $result . "</h4>";

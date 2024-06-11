@@ -32,19 +32,37 @@
         $bm4 = $_POST["Bm4"];
         $valorFinal = (float) $bm1 + (float) $bm2 + (float) $bm3 + (float) $bm4;
         $resultado = $valorFinal / 4;
+        $diferencaPraMedia = 7 - $resultado;
         // Verifica o resltado e apresenta na tela
         if ($resultado == 0) {
             $result =  "O aluno foi reprovado com mota final : 0.0";
         } elseif ($resultado >= 7) {
             $result =  "O aluno em questão foi aprovado com nota final : " . $resultado;
         } else {
-            $result =  "O aluno em questão foi reprovado com nota final : " . $resultado;
+            $result = "Faltou " . $diferencaPraMedia . " para atingir a média. <br> O aluno em questão foi reprovado com nota final : " . $resultado . "<br>";
         }
 
+        if ($resultado >= 7) {
+            $feedback = "Parabéns, você foi aprovado!";
+        } elseif ($resultado >= 5) {
+            $feedback = "Você está na média, mas pode melhorar.";
+        } else {
+            $feedback = "Você foi reprovado, estude mais!";
+        }
+
+        echo "<h4>O aluno  obteve a nota final: =</h4>";
+            echo "<p>$feedback</p>";
+        } else {
+            echo "<h4>Preencha todos os campos.</h4>";
+        }
+    
+
         echo "<h4>" . $result . "</h4>";
-    }
+    
 
     ?>
+
+</body>
 
 </body>
 

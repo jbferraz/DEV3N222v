@@ -1,0 +1,45 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Cor de fundo bonita */
+    background-image: url('caminho/para/sua/imagem.jpg'); /* Caminho para a sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos para o contêiner */
+.container {
+    text-align: center;
+}
+
+/* Estilos para o título */
+.titulo {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilos para a imagem */
+.imagem {
+    display: block;
+    margin: 0 auto; /* Para centralizar a imagem horizontalmente */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para o resultado */
+.resultado {
+    font-size: 18px;
+    color: green;
+}
+
+/* Estilos para a mensagem de erro */
+.erro {
+    font-size: 18px;
+    color: red;
+}

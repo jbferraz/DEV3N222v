@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+select, input, button, p {
+    font-size: 25px;
+    padding: 2px;
+}

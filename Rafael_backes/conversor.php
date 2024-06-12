@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conversor de DOLxBRL e BRLxDOL</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,6 +56,8 @@
 <body>
 <div class="conversion">
         <form action="" method="post">
+            <label for="obs">OBS : Cotação utilizada no cálculo é 5,16</label><br>
+            <br>
             <label for="dolar">Moeda: Dolar</label>
             <input type="number"  name="dolar" placeholder="Digite sua quantidade de dolar">
             <label for="real">Moeda: Real</label>

@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('img/cachorro.jpg');
+            background-image: url('img/BlueLobster.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

@@ -1,0 +1,96 @@
+
+body{
+    width: 100%;
+}
+.square-button { 
+    padding: 10px 20px;
+    background-color: #fff; /* Fundo branco */
+    border: 2px solid #000; /* Borda preta */
+    color: #000; 
+    text-decoration: none;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    margin-right: 10px; 
+    border-radius: 1px; /* Borda arredondada */
+   }
+  .button-container{
+    display: flex;
+    justify-content: center;
+    width: 59%;
+    margin-top: 20px;
+  }
+
+    /* ESTILO PRA PASSAR O MOUSE */
+    .square-button:hover {
+      background-color: #000; /* Fundo preto */
+      color: #fff; /* Cor do texto branca */
+    }
+    .formulario{
+        display: flex ;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+        background-color: rgb(231, 236, 255);
+        border-color: #000;
+        align-items: flex-start;
+        margin-left: 7%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+       }
+       /**11DIV**/
+       .form-group {
+        margin-bottom: 20px;     
+        
+       }
+       
+       .form-group label {
+           display: block;
+           margin-top: 20px; 
+           font-size: 17px;
+           margin-bottom: 10px;
+           color: #4e4949;
+       }
+    
+    input[type="float"],
+    input[type="Bm1"],
+    input[type="Bm2"],
+    input[type="Bm3"],
+    input[type="Bm4"],      
+  
+    input[type="float"]:focus,
+    input[type="Bm1"]:focus,
+    input[type="Bm2"]:focus,
+    input[type="Bm3"]:focus,
+    input[type="Bm4"]:focus,     
+      
+    input[type="float"] + label,
+    input[type="Bm1"] + label,
+    input[type="Bm2"] + label,
+    input[type="Bm3"] + label,
+    input[type="Bm4"] + label,
+   
+
+    .square-but {
+        display: inline-block;
+        margin-right: 10px; 
+        padding: 10px 15px;
+        background-color: #fff; 
+        border: 1px solid #000;
+        color: #000;
+        text-decoration: none; 
+        transition: background-color 0.3s, color 0.3s; 
+    }
+    
+    .square-but:hover {
+        background-color: #2543d4; 
+        color: #fff; 
+    }
+    .form-container{
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+    flex-wrap: wrap; /* itens se quebram para a próxima linha se necessário */
+    }

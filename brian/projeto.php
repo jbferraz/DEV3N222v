@@ -46,14 +46,33 @@
 <body>
     <div class="container">
         <h1>Calculadora de Idade</h1>
-        <form method="post">
+        <form id="formIdade">
             <label for="data_nascimento">Data de Nascimento:</label>
             <input type="date" id="data_nascimento" name="data_nascimento" required>
             <button type="submit">Calcular Idade</button>
         </form>
-        <div class="resultado">
+        <div class="resultado" id="resultadoIdade">
             <!-- Aqui será exibido o resultado da idade -->
         </div>
     </div>
+
+    <script>
+        document.getElementById("formIdade").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            var formData = new FormData(this);
+            var dataNascimento = formData.get("data_nascimento");
+            
+            var hoje = new Date();
+            var dataNasc = new Date(dataNascimento);
+            var idade = hoje.getFullYear() - dataNasc.getFullYear();
+            var mes = hoje.getMonth() - dataNasc.getMonth();
+            if (mes < 0 || (mes === 0 && hoje.getDate() < dataNasc.getDate())) {
+                idade--;
+            }
+            
+            document.getElementById("resultadoIdade").innerText = "Idade: " + idade + " anos";
+        });
+    </script>
 </body>
 </html>

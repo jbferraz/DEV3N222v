@@ -11,6 +11,7 @@
 	<p>teste fora do php</p>
 	<a href="formNotas.php" >Calcular Notas</a><br>
 	<a href="formNotasNovo.php" >Calcular Notas Novo</a><br>
+	<a href="Rafael_backes/conversor.php">Conversor de moedas : BRL x DOL - Rafael Backes</a>
 	<?php
 		//Comentário de linha no PHP igual no Java
 		echo "TESTE dentro da tag php";
